@@ -114,7 +114,7 @@ const Sidebar: React.FC = () => {
 
   return (
     <div
-      className={`relative h-full p-2 flex-shrink-0 flex flex-col transition-all duration-300 ${
+      className={`fixed sm:relative md:relative lg:relative z-50 h-full p-2 flex-shrink-0 flex flex-col transition-all duration-300 bg-white ${
         isCollapsed ? "w-16" : "w-64"
       }`}
     >
@@ -124,7 +124,7 @@ const Sidebar: React.FC = () => {
         }`}
         onClick={toggleCollapse}
       >
-        <BsLayoutSidebarInset className="text-xl" />
+        <BsLayoutSidebarInset className="text-xl sm:fixed left-5 top-6 z-50 " />
       </div>
       <div className="relative">
         <div className="flex items-center justify-between p-3 bg-gray-200 rounded-md cursor-pointer dark:bg-gray-950">
